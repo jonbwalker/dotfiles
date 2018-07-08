@@ -88,6 +88,7 @@ echo "Installing global npm packages..."
 npm install marked -g
 
 echo "Configuring OSX..."
+# https://www.defaults-write.com/change-default-view-style-in-os-x-finder/
 
 # Require password as soon as screensaver or sleep mode starts
 defaults write com.apple.screensaver askForPassword -int 1
