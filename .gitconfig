@@ -1,0 +1,13 @@
+# This is Git's per-user configuration file.
+[user]
+	name = jonbwalker
+	email = jonathan.b.walker0@gmail.com
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+[alias]
+	add-commit = !git add -A && git commit
+[core]
+	autocrlf = input
