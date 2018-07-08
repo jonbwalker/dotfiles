@@ -123,6 +123,9 @@ defaults write com.apple.finder FXPreferredViewStyle Nlsv
 defaults write -g com.apple.trackpad.scaling 2
 defaults write -g com.apple.mouse.scaling 2.5
 
+# Don't create .DS_Store files on network volumes"
+defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
+
 echo "Creating folder structure..."
 [[ ! -d Wiki ]] && mkdir Wiki
 [[ ! -d Workspace ]] && mkdir Workspace
