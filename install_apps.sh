@@ -104,6 +104,11 @@ echo "Creating folder structure..."
 [[ ! -d Wiki ]] && mkdir Wiki
 [[ ! -d Workspace ]] && mkdir Workspace
 
+# Get my dotfiles
+echo "Clone dotfiles from Github"
+cd $HOME/Workspace
+git clone https://github.com/jonbwalker/dotfiles.git
+
 if test ! $(which zsh); then
     echo "Installing oh my zsh..."
     ruby -e "$(curl -L https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh | sh)"
