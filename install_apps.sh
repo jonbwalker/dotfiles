@@ -134,6 +134,10 @@ defaults write com.apple.dock autohide-time-modifier -float 0
 echo "Creating folder structure..."
 [[ ! -d Wiki ]] && mkdir Wiki
 [[ ! -d Workspace ]] && mkdir Workspace
+[[ ! -d ScreenShots ]] && mkdir ScreenShots
+
+#"Setting screenshots location to ~/Desktop"
+defaults write com.apple.screencapture location -string "$HOME/ScreenShots"
 
 # Get my dotfiles
 echo "Clone dotfiles from Github"
