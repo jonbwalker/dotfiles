@@ -126,6 +126,11 @@ defaults write -g com.apple.mouse.scaling 2.5
 # Don't create .DS_Store files on network volumes"
 defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
 
+# Set Dock to auto-hide and remove the auto-hide delay
+defaults write com.apple.dock autohide -bool true
+defaults write com.apple.dock autohide-delay -float 0
+defaults write com.apple.dock autohide-time-modifier -float 0
+
 echo "Creating folder structure..."
 [[ ! -d Wiki ]] && mkdir Wiki
 [[ ! -d Workspace ]] && mkdir Workspace
