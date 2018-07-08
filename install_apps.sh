@@ -113,6 +113,9 @@ defaults write com.apple.LaunchServices LSQuarantine -bool false
 # Automatically quit printer app once the print jobs complete
 defaults write com.apple.print.PrintingPrefs "Quit When Finished" -bool true
 
+# Use list view in all Finder windows by default
+defaults write com.apple.finder FXPreferredViewStyle Nlsv
+
 # Enable full keyboard access for all controls (e.g. enable Tab in modal dialogs)"
 # defaults write NSGlobalDomain AppleKeyboardUIMode -int 3
 
