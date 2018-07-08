@@ -65,7 +65,7 @@ CASKS=(
 )
 
 echo "Installing cask apps..."
-brew cask install ${CASKS[@]}
+brew cask install --appdir="/Applications" ${CASKS[@]}
 
 echo "Installing fonts..."
 brew tap caskroom/fonts
