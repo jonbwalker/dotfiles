@@ -155,7 +155,7 @@ if test ! $(which zsh); then
     ruby -e "$(curl -L https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh | sh)"
 fi
 
-echo "Restarting Finder"
+echo "Restarting Finder for changes to take effect"
 killall Finder
 
 echo "Bootstrapping complete"
