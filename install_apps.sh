@@ -1,3 +1,4 @@
+#!/usr/bin/env bash
 # Bootstrap script for installing apps on a fresh macOS machine
 # https://gist.github.com/codeinthehole/26b37efa67041e1307db
 
