@@ -103,8 +103,8 @@ defaults write com.apple.finder AppleShowAllFiles YES
 defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad Clicking -bool true
 defaults -currentHost write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
 
-# Disabling OS X Gate Keeper
-# (You'll be able to install any app you want from here on, not just Mac App Store apps)
+# Disable OS X Gate Keeper
+# Install apps from any developer, not just  App Store apps
 sudo spctl --master-disable
 sudo defaults write /var/db/SystemPolicy-prefs.plist enabled -string no
 defaults write com.apple.LaunchServices LSQuarantine -bool false
