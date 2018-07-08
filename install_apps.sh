@@ -13,6 +13,7 @@ if test ! $(which brew); then
 fi
 
 # Update homebrew recipes
+echo "Updating homebrew..."
 brew update
 
 # Install GNU core utilities (those that come with OS X are outdated)
@@ -136,6 +137,9 @@ defaults write com.apple.dock autohide-time-modifier -float 0
 
 # Set screenshot format to PNG
 defaults write com.apple.screencapture type -string "png"
+
+# Enable Finder quit option
+defaults write com.apple.finder QuitMenuItem -bool true;
 
 echo "Creating folder structure..."
 [[ ! -d Wiki ]] && mkdir Wiki
