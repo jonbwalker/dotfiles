@@ -1,6 +1,10 @@
 #!/usr/bin/env bash
 # Bootstrap script for installing apps on a fresh macOS machine
+
+# Source Links
 # https://gist.github.com/codeinthehole/26b37efa67041e1307db
+# https://gist.github.com/bradp/bea76b16d3325f5c47d4
+# https://www.defaults-write.com/change-default-view-style-in-os-x-finder/
 
 # Check for Homebrew, install if we don't have it
 if test ! $(which brew); then
@@ -88,7 +92,6 @@ echo "Installing global npm packages..."
 npm install marked -g
 
 echo "Configuring OSX..."
-# https://www.defaults-write.com/change-default-view-style-in-os-x-finder/
 
 # Require password as soon as screensaver or sleep mode starts
 defaults write com.apple.screensaver askForPassword -int 1
