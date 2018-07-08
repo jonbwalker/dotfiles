@@ -49,8 +49,8 @@ echo "Installing cask..."
 brew install caskroom/cask/brew-cask
 
 CASKS=(
-    firefox
     google-chrome
+    firefox
     iterm2
     macvim
     skype
@@ -60,6 +60,8 @@ CASKS=(
     spectacle
     visual-studio-code
     webstorm
+    spectacle
+    paintbrush
 )
 
 echo "Installing cask apps..."
