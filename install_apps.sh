@@ -109,6 +109,9 @@ sudo spctl --master-disable
 sudo defaults write /var/db/SystemPolicy-prefs.plist enabled -string no
 defaults write com.apple.LaunchServices LSQuarantine -bool false
 
+# Automatically quit printer app once the print jobs complete
+defaults write com.apple.print.PrintingPrefs "Quit When Finished" -bool true
+
 echo "Creating folder structure..."
 [[ ! -d Wiki ]] && mkdir Wiki
 [[ ! -d Workspace ]] && mkdir Workspace
