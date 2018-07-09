@@ -4,7 +4,7 @@
 dotfilepath="$HOME/Workspace/dotfiles"
 
 if [[ -d "$dotfilepath" ]]; then
-  echo "Symlinking dotfiles from $dotfilepath"
+  echo "linking dotfiles from $dotfilepath"
 else
   echo "$dotfilepath does not exist"
   exit 1
