@@ -2,6 +2,7 @@
 # Bootstrap script for installing apps on a fresh macOS machine
 
 # Source Links
+# https://dotfiles.github.io/
 # https://gist.github.com/codeinthehole/26b37efa67041e1307db
 # https://gist.github.com/bradp/bea76b16d3325f5c47d4
 # https://www.defaults-write.com/change-default-view-style-in-os-x-finder/
