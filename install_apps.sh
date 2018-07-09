@@ -146,10 +146,10 @@ echo "Creating folder structure..."
 [[ ! -d Workspace ]] && mkdir Workspace
 [[ ! -d ScreenShots ]] && mkdir ScreenShots
 
-#"Setting screenshots location to ~/Desktop"
+# Set screenshots location
 defaults write com.apple.screencapture location -string "$HOME/ScreenShots"
 
-# Get my dotfiles
+# Clone dotfiles repo
 echo "Clone dotfiles from Github"
 cd $HOME/Workspace
 git clone https://github.com/jonbwalker/dotfiles.git
@@ -165,4 +165,4 @@ fi
 echo "Restarting Finder for changes to take effect"
 killall Finder
 
-echo "Bootstrapping complete"
+echo "Custom install complete, your Macbook is ready to use ;)"
