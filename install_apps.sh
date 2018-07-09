@@ -154,6 +154,9 @@ echo "Clone dotfiles from Github"
 cd $HOME/Workspace
 git clone https://github.com/jonbwalker/dotfiles.git
 
+echo "Creating dotfile symlinks"
+sh symlinks.sh
+
 if test ! $(which zsh); then
     echo "Installing oh my zsh..."
     ruby -e "$(curl -L https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh | sh)"
