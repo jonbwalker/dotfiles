@@ -154,7 +154,7 @@ echo "Clone dotfiles from Github"
 cd $HOME/Workspace
 git clone https://github.com/jonbwalker/dotfiles.git
 
-echo "Creating dotfile symlinks"
+echo "Running symlinks.sh"
 sh symlinks.sh
 
 if test ! $(which zsh); then
