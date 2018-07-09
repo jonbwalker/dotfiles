@@ -7,15 +7,6 @@
 # https://gist.github.com/bradp/bea76b16d3325f5c47d4
 # https://www.defaults-write.com/change-default-view-style-in-os-x-finder/
 
-# Check for Homebrew, install if we don't have it
-if test ! $(which brew); then
-    echo "Installing homebrew..."
-    ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-fi
-
-# Update homebrew recipes
-echo "Updating homebrew..."
-brew update
 
 # Install GNU core utilities (those that come with OS X are outdated)
 #brew tap homebrew/dupes
@@ -33,7 +24,6 @@ brew install findutils
 brew install bash
 
 PACKAGES=(
-    git
     lynx
     markdown
     npm
@@ -149,11 +139,6 @@ echo "Creating folder structure..."
 
 # Set screenshots location
 defaults write com.apple.screencapture location -string "$HOME/ScreenShots"
-
-# Clone dotfiles repo
-echo "Clone dotfiles from Github"
-cd $HOME/Workspace
-git clone https://github.com/jonbwalker/dotfiles.git
 
 echo "Running symlinks.sh"
 sh symlinks.sh
