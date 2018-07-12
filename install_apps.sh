@@ -24,6 +24,7 @@ brew install findutils
 brew install bash
 
 PACKAGES=(
+    hub
     lynx
     markdown
     npm
