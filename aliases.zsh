@@ -3,6 +3,7 @@ alias ip='ipconfig getifaddr en0'
 alias wip='ipconfig getifaddr en1'
 
 #git aliases
+alias git=hub
 alias gc='git checkout $1'
 alias gstat='git status -s'
 alias gad='git add -A'
