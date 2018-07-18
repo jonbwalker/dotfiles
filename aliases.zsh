@@ -1,6 +1,7 @@
 #system aliases
 alias ip='ipconfig getifaddr en0'
 alias wip='ipconfig getifaddr en1'
+alias indexsl='sudo mdutil -E /'
 
 #git aliases
 alias git=hub
