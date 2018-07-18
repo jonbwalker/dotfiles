@@ -21,3 +21,6 @@ alias dup="docker-compose up"
 alias ddown="docker-compose down"
 alias dpull="docker-compose pull"
 alias dall=" docker-compose down --rmi ‘all’"
+
+# shortcuts
+alias dfiles='cd ~/Workspace/dotfiles'
