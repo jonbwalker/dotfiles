@@ -16,11 +16,12 @@ alias javavs="/usr/libexec/java_home -V"
 alias javav="java -version"
 
 #docker aliases
+alias dc="docker-compose"
 alias dps="docker ps"
-alias dup="docker-compose up"
-alias ddown="docker-compose down"
-alias dpull="docker-compose pull"
-alias dall=" docker-compose down --rmi ‘all’"
+alias dup="dc up"
+alias ddown="dc down"
+alias dpull="dc pull"
+alias dall="dc down --rmi ‘all’"
 
 # shortcuts
 alias dfiles='cd ~/Workspace/dotfiles'
