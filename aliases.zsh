@@ -11,6 +11,10 @@ alias gad='git add -A'
 alias dev="git checkout develop"
 alias master="git checkout master"
 
+#npm script aliases
+alias t="yarn test"
+alias tc="yarn test:coverage"
+
 #java aliases
 alias javavs="/usr/libexec/java_home -V"
 alias javav="java -version"
