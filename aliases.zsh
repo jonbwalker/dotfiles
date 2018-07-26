@@ -22,6 +22,8 @@ alias dup="dc up"
 alias ddown="dc down"
 alias dpull="dc pull"
 alias dall="dc down --rmi ‘all’"
+alias dlogs="docker logs $1"
+alias dexec="docker exec -it $1 /bin/bash"
 
 # shortcuts
 alias dfiles='cd ~/Workspace/dotfiles'
