@@ -12,6 +12,7 @@ alias dev="git checkout develop"
 alias master="git checkout master"
 
 #npm script aliases
+alias ys="yarn start"
 alias t="yarn test"
 alias tc="yarn test:coverage"
 
