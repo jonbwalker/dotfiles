@@ -14,6 +14,7 @@ brew install git
 
 # Clone dotfiles repo
 echo "Clone dotfiles from Github"
+[[ ! -d Workspace ]] && mkdir Workspace
 cd $HOME/Workspace
 git clone https://github.com/jonbwalker/dotfiles.git
 
