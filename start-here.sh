@@ -19,7 +19,9 @@ brew install git
 echo "Clone dotfiles from Github"
 [[ ! -d Workspace ]] && mkdir Workspace
 cd $HOME/Workspace
-git clone https://github.com/jonbwalker/dotfiles.git
+if [ ! -d dotfiles ]; then
+  git clone https://github.com/jonbwalker/dotfiles.git
+fi
 
 read -p "Are you ready to start the main install?" -n 1 -r
 echo    # (optional) move to a new line
