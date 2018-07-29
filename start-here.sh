@@ -8,7 +8,7 @@ fi
 
 # Update homebrew recipes
 echo "Updating homebrew..."
-brew update
+brew update || exit 1
 
 brew install git
 
