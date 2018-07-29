@@ -27,7 +27,7 @@ fi
 
 read -p "Are you ready to start the main install?" -n 1 -r
 echo    # (optional) move to a new line
-if [[ $REPLY =~ ^[Yy]$ ]] then
+if [[ $REPLY =~ ^[Yy]$ ]]; then
     sh install_apps.sh
 else
  # Print output in red
