@@ -29,7 +29,7 @@ fi
 read -p "Are you ready to start the main install? (y/n)" -n 1 -r
 echo
 if [[ $REPLY =~ ^[Yy]$ ]]; then
-    sh install_apps.sh
+    sh ~/Workspace/dotfiles/install_apps.sh
 else
  # Print output in red
     printf "\e[0;31m  [✖] install cancelled\e[0m\n"
