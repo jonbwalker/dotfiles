@@ -63,7 +63,7 @@ echo "Installing cask apps..."
 brew cask install --appdir="/Applications" ${CASKS[@]}
 
 echo "Installing fonts..."
-brew tap caskroom/fonts
+brew tap homebrew/cask-fonts
 FONTS=(
     font-inconsolidata
     font-roboto
