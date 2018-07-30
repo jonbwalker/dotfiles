@@ -142,7 +142,7 @@ echo "Creating folder structure..."
 defaults write com.apple.screencapture location -string "$HOME/ScreenShots"
 
 echo "Running symlinks.sh"
-sh symlinks.sh
+sh ~/Workspace/dotfiles/symlinks.sh
 
 if test ! $(which zsh); then
     echo "Installing oh my zsh..."
