@@ -16,7 +16,7 @@ brew update
 brew install git
 
 # Clone dotfiles repo
-echo "Clone dotfiles from Github"
+echo "Cloning dotfiles from Github..."
 [[ ! -d Workspace ]] && mkdir Workspace
 cd $HOME/Workspace
 if [ ! -d dotfiles ]; then
@@ -26,7 +26,7 @@ else
   echo
 fi
 
-read -p "Are you ready to start the main install?" -n 1 -r
+read -p "Are you ready to start the main install? (y/n)" -n 1 -r
 echo
 if [[ $REPLY =~ ^[Yy]$ ]]; then
     sh install_apps.sh
