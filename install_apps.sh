@@ -65,7 +65,7 @@ brew cask install --appdir="/Applications" ${CASKS[@]}
 echo "Installing fonts..."
 brew tap homebrew/cask-fonts
 FONTS=(
-    font-inconsolidata
+    font-inconsolata
     font-roboto
     font-clear-sans
 )
