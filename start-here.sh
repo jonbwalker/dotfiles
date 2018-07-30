@@ -23,6 +23,7 @@ if [ ! -d dotfiles ]; then
   git clone https://github.com/jonbwalker/dotfiles.git
 else
   printf "dotfiles already exists"
+  echo
 fi
 
 read -p "Are you ready to start the main install?" -n 1 -r
