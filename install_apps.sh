@@ -44,6 +44,7 @@ brew cleanup
 
 CASKS=(
     google-chrome
+    google-drive
     firefox
     iterm2
     macvim
