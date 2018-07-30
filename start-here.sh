@@ -17,8 +17,13 @@ brew install git
 
 # Clone dotfiles repo
 echo "Cloning dotfiles from Github..."
+
+echo "Creating Workspace directory"
 [[ ! -d Workspace ]] && mkdir Workspace
+
+echo "Navigating to $HOME/Workspace"
 cd $HOME/Workspace
+
 if [ ! -d dotfiles ]; then
   git clone https://github.com/jonbwalker/dotfiles.git
 else
@@ -26,6 +31,7 @@ else
   echo
 fi
 
+# Confirm before installing system apps
 read -p "Are you ready to start the main install? (y/n)" -n 1 -r
 echo
 if [[ $REPLY =~ ^[Yy]$ ]]; then
