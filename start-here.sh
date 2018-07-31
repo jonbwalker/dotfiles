@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # https://github.com/Homebrew/brew/issues/2062
-sudo chown -R $USER:admin /usr/local
+# sudo chown -R $USER:admin /usr/local
 
 # Install Homebrew
 if test ! $(which brew); then
