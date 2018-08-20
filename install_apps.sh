@@ -61,14 +61,14 @@ CASKS=(
 echo "Installing cask apps..."
 brew cask install --appdir="/Applications" ${CASKS[@]}
 
-echo "Installing fonts..."
-brew tap homebrew/cask-fonts
-FONTS=(
-    font-inconsolata
-    font-roboto
-    font-clear-sans
-)
-brew cask install ${FONTS[@]}
+#echo "Installing fonts..."
+#brew tap homebrew/cask-fonts
+#FONTS=(
+#    font-inconsolata
+#    font-roboto
+#    font-clear-sans
+#)
+#brew cask install ${FONTS[@]}
 
 #echo "Installing Ruby gems"
 #RUBY_GEMS=(
