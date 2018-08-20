@@ -54,8 +54,8 @@ CASKS=(
     spectacle
     visual-studio-code
     webstorm
-    spectacle
     paintbrush
+    bettertouchtool
 )
 
 echo "Installing cask apps..."
