@@ -25,7 +25,6 @@ brew install bash
 
 PACKAGES=(
     hub
-    lynx
     markdown
     npm
     yarn
