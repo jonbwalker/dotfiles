@@ -2,7 +2,7 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH=/Users/jonathanwalker/.oh-my-zsh
+ export ZSH=/Users/jonathanwalker/.oh-my-zsh
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
@@ -154,5 +154,17 @@ alias dexec="docker exec -it $1 /bin/bash"
 # shortcuts
 alias dfiles='cd ~/Workspace/dotfiles'
 
-export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)
-test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+#export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)
+
+# Lines configured by zsh-newuser-install
+HISTFILE=~/.histfile
+HISTSIZE=1000
+SAVEHIST=1000
+bindkey -e
+# End of lines configured by zsh-newuser-install
+# The following lines were added by compinstall
+zstyle :compinstall filename '/Users/jonathanwalker/.zshrc'
+
+autoload -Uz compinit
+compinit
+# End of lines added by compinstall
