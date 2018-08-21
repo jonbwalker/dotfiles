@@ -58,9 +58,7 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(
-  git
-)
+plugins=( git zsh-nvm )
 
 source $ZSH/oh-my-zsh.sh
 
@@ -152,7 +150,9 @@ alias dlogs="docker logs $1"
 alias dexec="docker exec -it $1 /bin/bash"
 
 # shortcuts
-alias dfiles='cd ~/Workspace/dotfiles'
+alias dfiles='cd ~/Workspace/dotfiles'\
+
+source ~/.zsh-nvm/zsh-nvm.plugin.zsh
 
 #export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)
 
