@@ -120,11 +120,19 @@ gbug() {
         git pull origin --rebase
         git checkout bugfix/"$@"
 	git stash pop
-
 }
+
+#vagrant aliases 
+alias sl="cd ~/Homestead && vagrant $1"
+alias slb="cd ~/code/ops && yarn $1"
+alias v="vagrant"
+alias vup="v up"
+alias vh="v halt"
+alias vgs="v global-status"
 
 #npm script aliase
 alias ys="yarn start"
+alias yw="yarn watch"
 alias t="yarn test"
 alias tc="yarn test:coverage"
 
@@ -132,12 +140,11 @@ alias tc="yarn test:coverage"
 alias javavs="/usr/libexec/java_home -V" 
 alias javav="java -version"
 
-#cwds aliases
-alias cans="cd ~/Workspace/cans"
-alias cansapi="cd ~/Workspace/cans-api"
-alias cansdata="cd ~/Workspace/cwds-data-model/"
-alias dbackend="dup redis cans-api"
-alias preinta="ssh app-a.preint-cwds.io"
+#sendlane aliases
+alias hs="cd ~/Homestead"
+alias slf="cd ~/code/sendlane"
+alias yho="yarn hot:ops"
+alias gcf="git checkout frontend"
 
 #docker aliases
 alias dc="docker-compose"
