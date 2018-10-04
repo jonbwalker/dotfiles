@@ -24,13 +24,8 @@ brew install findutils
 brew install bash
 
 PACKAGES=(
-    hub
-    markdown
     npm
-    yarn
-    terminal-notifier
     vim
-    wget
     zsh
     zsh-completions
 )
@@ -43,7 +38,6 @@ brew cleanup
 
 CASKS=(
     google-chrome
-    google-backup-and-sync 
     firefox
     iterm2
     macvim
