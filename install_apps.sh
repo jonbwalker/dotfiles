@@ -108,11 +108,11 @@ defaults write com.apple.screencapture type -string "png"
 defaults write com.apple.finder QuitMenuItem -bool true;
 
 echo "Creating folder structure..."
-[[ ! -d Workspace ]] && mkdir Workspace
-[[ ! -d ScreenShots ]] && mkdir ScreenShots
+[[ ! -d ~/Workspace ]] && mkdir Workspace
+[[ ! -d ~/ScreenShots ]] && mkdir ScreenShots
 
 # Set screenshots location
-defaults write com.apple.screencapture location -string "$HOME/ScreenShots"
+defaults write com.apple.screencapture location ~/Screenshots
 
 echo "Running symlinks.sh"
 sh ~/Workspace/dotfiles/symlinks.sh
@@ -122,7 +122,8 @@ if test ! $(which zsh); then
     sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 fi
 
-echo "Restarting Finder for changes to take effect"
+echo "Restarting Finder and SystemUI for changes to take effect"
 killall Finder
+killall SystemUIServer
 
 echo "Custom install complete, your Macbook is ready to use ;)"
