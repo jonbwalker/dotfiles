@@ -2,7 +2,7 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
- export ZSH=/Users/jonathanwalker/.oh-my-zsh
+ export ZSH=/Users/jonbwalker/.oh-my-zsh
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
@@ -159,8 +159,8 @@ alias dexec="docker exec -it $1 /bin/bash"
 # shortcuts
 alias dfiles='cd ~/Workspace/dotfiles'\
 
-source ~/.zsh-nvm/zsh-nvm.plugin.zsh
-
+export NVM_DIR="$HOME/.nvm"
+. "/usr/local/opt/nvm/nvm.sh"
 #export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)
 
 # Lines configured by zsh-newuser-install
@@ -170,7 +170,7 @@ SAVEHIST=1000
 bindkey -e
 # End of lines configured by zsh-newuser-install
 # The following lines were added by compinstall
-zstyle :compinstall filename '/Users/jonathanwalker/.zshrc'
+zstyle :compinstall filename '/Users/jonbwalker/.zshrc'
 
 autoload -Uz compinit
 compinit
