@@ -130,11 +130,13 @@ alias vup="v up"
 alias vh="v halt"
 alias vgs="v global-status"
 
-#npm script aliase
+#npm script aliaes
 alias ys="yarn start"
 alias yw="yarn watch"
 alias t="yarn test"
 alias tc="yarn test:coverage"
+alias ni="npm i"
+alias nrm="rm -rf node_modules && ni"
 
 #java aliases
 alias javavs="/usr/libexec/java_home -V" 
@@ -142,9 +144,12 @@ alias javav="java -version"
 
 #sendlane aliases
 alias hs="cd ~/Homestead"
-alias slf="cd ~/code/sendlane"
+alias sl="cd ~/code/sendlane"
 alias yho="yarn hot:ops"
 alias gcf="git checkout frontend"
+alias nh="npm run hot"
+alias nd="npm run dev"
+alias nho="npm run hot:ops"
 
 #docker aliases
 alias dc="docker-compose"
