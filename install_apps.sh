@@ -108,7 +108,6 @@ defaults write com.apple.screencapture type -string "png"
 defaults write com.apple.finder QuitMenuItem -bool true;
 
 echo "Creating folder structure..."
-[[ ! -d Wiki ]] && mkdir Wiki
 [[ ! -d Workspace ]] && mkdir Workspace
 [[ ! -d ScreenShots ]] && mkdir ScreenShots
 
