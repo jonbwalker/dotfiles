@@ -25,6 +25,7 @@ brew install bash
 
 PACKAGES=(
     npm
+    terminal-notifier
     vim
     zsh
     zsh-completions
