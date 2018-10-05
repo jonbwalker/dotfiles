@@ -36,9 +36,11 @@ brew install ${PACKAGES[@]}
 
 echo "Cleaning up..."
 brew cleanup
+brew tap homebrew/cask-versions
 
 CASKS=(
     google-chrome
+    google-chrome-canary
     firefox
     iterm2
     macvim
