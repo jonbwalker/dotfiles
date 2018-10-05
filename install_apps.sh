@@ -90,6 +90,9 @@ defaults write com.apple.finder FXPreferredViewStyle Nlsv
 # Enable full keyboard access for all controls (e.g. enable Tab in modal dialogs)"
 # defaults write NSGlobalDomain AppleKeyboardUIMode -int 3
 
+# Enable f keys
+defaults write -g com.apple.keyboard.fnState -boolean true
+
 # Set trackpad & mouse speed"
 defaults write -g com.apple.trackpad.scaling 2
 defaults write -g com.apple.mouse.scaling 2.5
