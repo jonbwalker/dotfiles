@@ -95,6 +95,7 @@ source $ZSH/oh-my-zsh.sh
 alias ip='ipconfig getifaddr en0'
 alias wip='ipconfig getifaddr en1'
 alias indexsl='sudo mdutil -E /'
+alias ref=". ~/.zshrc"
 
 #git aliases
 alias gc='git checkout $1'
@@ -144,12 +145,14 @@ alias javav="java -version"
 
 #sendlane aliases
 alias hs="cd ~/Homestead"
-alias sl="cd ~/code/sendlane"
+alias sl="cd ~/code/sendlane/sendlane"
+alias sli="cd ~/code/sendlane/sendlane/resources/assets/mix/interface/views"
 alias yho="yarn hot:ops"
 alias gcf="git checkout frontend"
 alias nh="npm run hot"
 alias nd="npm run dev"
 alias nho="npm run hot:ops"
+alias ntw="npm run test:watch"
 
 #docker aliases
 alias dc="docker-compose"
@@ -162,9 +165,13 @@ alias dlogs="docker logs $1"
 alias dexec="docker exec -it $1 /bin/bash"
 
 # shortcuts
-alias dfiles='cd ~/Workspace/dotfiles'\
+alias dfiles='cd ~/Workspace/dotfiles'
+alias vzsh='vim ~/.zshrc'
+alias jbw="~//Workspace/jonbwalker.com"
 
 export NVM_DIR="$HOME/.nvm"
+export PATH=$PATH:~/.composer/vendor/bin
+export PATH=$PATH:~/Code/sendlane/sendlane/vendor/phpunit/phpunit
 . "/usr/local/opt/nvm/nvm.sh"
 #export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)
 
