@@ -96,6 +96,7 @@ alias ip='ipconfig getifaddr en0'
 alias wip='ipconfig getifaddr en1'
 alias indexsl='sudo mdutil -E /'
 alias ref=". ~/.zshrc"
+alias debug="/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --remote-debugging-port=9222 --user-data-dir=/tmp/chrome-debug"
 
 #git aliases
 alias gc='git checkout $1'
@@ -103,6 +104,7 @@ alias gstat='git status -s'
 alias gad='git add -A'
 alias dev="git checkout develop"
 alias master="git checkout master"
+alias grs="git reset --soft HEAD^"
 
 #git functions
 feat() {git checkout feature/"$@"}
@@ -142,6 +144,9 @@ alias nrm="rm -rf node_modules && ni"
 #java aliases
 alias javavs="/usr/libexec/java_home -V" 
 alias javav="java -version"
+
+#php aliases
+alias art="sl && php artisan"
 
 #sendlane aliases
 alias hs="cd ~/Homestead"
