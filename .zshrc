@@ -105,6 +105,8 @@ alias gad='git add -A'
 alias dev="git checkout develop"
 alias master="git checkout master"
 alias grs="git reset --soft HEAD^"
+alias fbranch="gup && gcb"
+alias branch="sl && gcf && fbranch"
 
 #git functions
 feat() {git checkout feature/"$@"}
