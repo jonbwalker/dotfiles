@@ -93,6 +93,7 @@ source $ZSH/oh-my-zsh.sh
 
 #system aliases
 alias ip='ipconfig getifaddr en0'
+alias pip='curl https://ipinfo.io/ip'
 alias wip='ipconfig getifaddr en1'
 alias indexsl='sudo mdutil -E /'
 alias ref=". ~/.zshrc"
