@@ -127,14 +127,6 @@ gbug() {
 	git stash pop
 }
 
-#vagrant aliases 
-alias sl="cd ~/Homestead && vagrant $1"
-alias slb="cd ~/code/ops && yarn $1"
-alias v="vagrant"
-alias vup="v up"
-alias vh="v halt"
-alias vgs="v global-status"
-
 #npm script aliaes
 alias ys="yarn start"
 alias yw="yarn watch"
