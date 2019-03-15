@@ -106,7 +106,6 @@ defaults write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
 
 # Don't create .DS_Store files on network volumes"
 defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
-
 # Set Dock to auto-hide and remove the auto-hide delay
 defaults write com.apple.dock autohide -bool true
 defaults write com.apple.dock autohide-delay -float 0
@@ -117,6 +116,10 @@ defaults write com.apple.screencapture type -string "png"
 
 # Enable Finder quit option
 defaults write com.apple.finder QuitMenuItem -bool true;
+
+# Set Key Repeat to fastest setting
+defaults write -g InitialKeyRepeat -int 10 # normal minimum is 15 (225 ms)
+defaults write -g KeyRepeat -int 1 # normal minimum is 2 (30 ms)
 
 echo "Creating folder structure..."
 [[ ! -d ~/Workspace ]] && mkdir Workspace
