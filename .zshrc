@@ -154,6 +154,11 @@ alias ntc="npm run test:coverage"
 alias mmain="art migrate --path=database/migrations/BaseMigrations"
 alias mtenant="art migrate:tenants --tenantdb _user"
 
+#composer aliases
+alias cda='composer dump-autoload'
+alias cli="composer install"
+alias clu="composer update"
+
 #docker aliases
 alias dc="docker-compose"
 alias dps="docker ps"
