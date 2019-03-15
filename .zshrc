@@ -129,10 +129,6 @@ gbug() {
 }
 
 #npm script aliaes
-alias ys="yarn start"
-alias yw="yarn watch"
-alias t="yarn test"
-alias tc="yarn test:coverage"
 alias ni="npm i"
 alias nrm="rm -rf node_modules && ni"
 
@@ -147,15 +143,15 @@ alias art="sl && php artisan"
 alias hs="cd ~/Homestead"
 alias sl="cd ~/code/sendlane/sendlane"
 alias sli="cd ~/code/sendlane/sendlane/resources/assets/mix/interface/views"
-alias yho="yarn hot:ops"
-alias gcf="gc frontend"
+alias gcm="gc master"
 alias gca="gc feature/automation-builder"
 alias nh="npm run hot"
 alias nd="npm run dev"
 alias nho="npm run hot:ops"
 alias nw="npm run watch"
 alias ntw="npm run test:watch"
-alias mmain="art migrate --path=database/migrations/main"
+alias ntc="npm run test:coverage"
+alias mmain="art migrate --path=database/migrations/BaseMigrations"
 alias mtenant="art migrate:tenants --tenantdb _user"
 
 #docker aliases
@@ -176,6 +172,7 @@ alias jbw="~//Workspace/jonbwalker.com"
 export NVM_DIR="$HOME/.nvm"
 export PATH=$PATH:~/.composer/vendor/bin
 export PATH=$PATH:~/Code/sendlane/sendlane/vendor/phpunit/phpunit
+export PATH=$PATH:~/.config
 . "/usr/local/opt/nvm/nvm.sh"
 #export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)
 
