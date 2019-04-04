@@ -138,6 +138,7 @@ alias javav="java -version"
 
 #php aliases
 alias art="sl && php artisan"
+alias rseed="cda && art db:seed --class="
 
 #sendlane aliases
 alias hs="cd ~/Homestead"
@@ -155,9 +156,10 @@ alias mmain="art migrate --path=database/migrations/BaseMigrations"
 alias mtenant="art migrate:tenants --tenantdb _user"
 
 #composer aliases
-alias cda='composer dump-autoload'
-alias cli="composer install"
-alias clu="composer update"
+alias ca='composer dump-autoload'
+alias ci="composer install"
+alias cu="composer update"
+alias cc="composer clear-cache"
 
 #docker aliases
 alias dc="docker-compose"
