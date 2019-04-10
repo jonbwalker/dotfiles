@@ -154,6 +154,7 @@ alias ntw="npm run test:watch"
 alias ntc="npm run test:coverage"
 alias mmain="art migrate --path=database/migrations/BaseMigrations"
 alias mtenant="art migrate:tenants --tenantdb _user"
+alias mtrollback="art migrate:tenants_rollback"
 
 #composer aliases
 alias ca='composer dump-autoload'
