@@ -152,7 +152,7 @@ alias nho="npm run hot:ops"
 alias nw="npm run watch"
 alias ntw="npm run test:watch"
 alias ntc="npm run test:coverage"
-alias mmain="art migrate --path=database/migrations/BaseMigrations"
+alias mmain="art migrate --path=database/migrations/main"
 alias mtenant="art migrate:tenants --tenantdb _user"
 alias mtrollback="art migrate:tenants_rollback"
 
@@ -196,3 +196,9 @@ zstyle :compinstall filename '/Users/jonbwalker/.zshrc'
 autoload -Uz compinit
 compinit
 # End of lines added by compinstall
+
+###-tns-completion-start-###
+if [ -f /Users/jonbwalker/.tnsrc ]; then 
+    source /Users/jonbwalker/.tnsrc 
+fi
+###-tns-completion-end-###
