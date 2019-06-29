@@ -139,6 +139,7 @@ alias javav="java -version"
 #php aliases
 alias art="sl && php artisan"
 alias rseed="cda && art db:seed --class="
+alias cclear="art config:cache"
 
 #sendlane aliases
 alias hs="cd ~/Homestead"
@@ -149,7 +150,7 @@ alias gca="gc feature/automation-builder"
 alias nh="npm run hot"
 alias nd="npm run dev"
 alias nho="npm run hot:ops"
-alias nw="npm run watch"
+alias nw="npm run watch:dash"
 alias ntw="npm run test:watch"
 alias ntc="npm run test:coverage"
 alias mmain="art migrate --path=database/migrations/main"
@@ -182,7 +183,9 @@ export PATH=$PATH:~/.composer/vendor/bin
 export PATH=$PATH:~/Code/sendlane/sendlane/vendor/phpunit/phpunit
 export PATH=$PATH:~/.config
 . "/usr/local/opt/nvm/nvm.sh"
-#export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)
+export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)
+export ANDROID_HOME=/usr/local/share/android-sdk
+export PATH=$PATH:$ANDROID_HOME
 
 # Lines configured by zsh-newuser-install
 HISTFILE=~/.histfile
