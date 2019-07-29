@@ -97,7 +97,7 @@ alias pip='curl https://ipinfo.io/ip'
 alias wip='ipconfig getifaddr en1'
 alias indexsl='sudo mdutil -E /'
 alias ref=". ~/.zshrc"
-alias debug="/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --remote-debugging-port=9222 --user-data-dir=/tmp/chrome-debug"
+alias debug="/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --remote-debugging-port=9222"
 
 #git aliases
 alias gc='git checkout $1'
@@ -151,11 +151,14 @@ alias nh="npm run hot"
 alias nd="npm run dev"
 alias nho="npm run hot:ops"
 alias nw="npm run watch:dash"
+alias nsd="npm run scripts:dev"
 alias ntw="npm run test:watch"
 alias ntc="npm run test:coverage"
 alias mmain="art migrate --path=database/migrations/main"
 alias mtenant="art migrate:tenants --tenantdb _user"
 alias mtrollback="art migrate:tenants_rollback"
+alias formq="php artisan queue:listen --queue=forms"
+source '.sendlane-profile'
 
 #composer aliases
 alias ca='composer dump-autoload'
