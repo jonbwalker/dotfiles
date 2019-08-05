@@ -132,6 +132,9 @@ gbug() {
 alias ni="npm i"
 alias nrm="rm -rf node_modules && ni"
 
+#npx aliases
+alias ntm="npx majestic --app"
+
 #java aliases
 alias javavs="/usr/libexec/java_home -V" 
 alias javav="java -version"
