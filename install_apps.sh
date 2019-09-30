@@ -63,6 +63,9 @@ npm install marked -g
 
 echo "Configuring OSX..."
 
+# example of how to read a value
+## defaults read com.apple.screensaver askForPassword
+
 # Require password as soon as screensaver or sleep mode starts
 defaults write com.apple.screensaver askForPassword -int 1
 defaults write com.apple.screensaver askForPasswordDelay -int 0
@@ -70,7 +73,7 @@ defaults write com.apple.screensaver askForPasswordDelay -int 0
 # Show filename extensions by default
 defaults write NSGlobalDomain AppleShowAllExtensions -bool true
 
-# Show hidden files by default 
+# Show hidden files by default
 defaults write com.apple.finder AppleShowAllFiles YES
 
 # Enable tap-to-click
