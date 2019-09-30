@@ -153,15 +153,16 @@ alias gca="gc feature/automation-builder"
 alias nh="npm run hot"
 alias nd="npm run dev"
 alias nho="npm run hot:ops"
-alias nw="npm run watch:dash"
-alias nsd="npm run scripts:dev"
+alias nw="build=interface npm run watch:dash"
+alias nsd="build=scripts npm run dev"
+alias na='npn run dev-all'
 alias ntw="npm run test:watch"
 alias ntc="npm run test:coverage"
 alias mmain="art migrate --path=database/migrations/main"
 alias mtenant="art migrate:tenants --tenantdb _user"
 alias mtrollback="art migrate:tenants_rollback"
 alias formq="php artisan queue:listen --queue=forms"
-source '.sendlane-profile'
+source ~/.sendlane-profile
 
 #composer aliases
 alias ca='composer dump-autoload'
