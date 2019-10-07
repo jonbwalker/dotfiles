@@ -168,7 +168,8 @@ alias cc="composer clear-cache"
 #php aliases
 alias art="sl && php artisan"
 alias rseed="cda && art db:seed --class="
-alias cclear="art config:cache"
+alias ac="art config:cache"
+alias acc="art config:clear"
 
 #docker aliases
 alias dc="docker-compose"
