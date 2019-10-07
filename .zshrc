@@ -139,11 +139,6 @@ alias ntm="npx majestic --app"
 alias javavs="/usr/libexec/java_home -V" 
 alias javav="java -version"
 
-#php aliases
-alias art="sl && php artisan"
-alias rseed="cda && art db:seed --class="
-alias cclear="art config:cache"
-
 #sendlane aliases
 alias hs="cd ~/Homestead"
 alias sl="cd ~/code/sendlane/sendlane"
@@ -169,6 +164,11 @@ alias ca='composer dump-autoload'
 alias ci="composer install"
 alias cu="composer update"
 alias cc="composer clear-cache"
+
+#php aliases
+alias art="sl && php artisan"
+alias rseed="cda && art db:seed --class="
+alias cclear="art config:cache"
 
 #docker aliases
 alias dc="docker-compose"
