@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 # ln -s /path/to/original /path/to/symlink
+# readlink -v .zsh-config
+#https://www.scivision.dev/repairing-broken-symbolic-link-linux/
 
 dotfilepath="$HOME/Workspace/dotfiles"
 
@@ -10,7 +12,9 @@ else
   exit 1
 fi
 
-ln -s $HOME/Workspace/dotfiles/aliases.zsh $ZSH_CUSTOM/aliases.zsh
-ln -s $HOME/Workspace/dotfiles/functions.zsh $ZSH_CUSTOM/functions.zsh
-ln -s $HOME/Workspace/dotfiles/.gitconfig $HOME/.gitconfig
-ln -s $HOME/Workspace/dotfiles/.zshrc $HOME/.zshrc
+#ln -s $HOME/Workspace/dotfiles/.aliases.zsh $ZSH_CUSTOM/.aliases.zsh
+ln -s $dotfilepath/.zsh-config.zsh $HOME/.zsh-config.zsh
+ln -s $dotfilepath/.functions.zsh $HOME/.functions.zsh
+ln -s $dotfilepath/.gitconfig $HOME/.gitconfig
+ln -s $dotfilepath/.zshrc $HOME/.zshrc
+ln -s $dotfilepath/.aliases.zsh $HOME/.aliases.zsh
