@@ -16,6 +16,7 @@ alias grs='git reset --soft HEAD^'
 alias fbranch='gup && gcb'
 alias branch='sl && gcf && fbranch'
 alias gpm='git pull origin master'
+alias gstat='git status -s'
 
 #java aliases
 alias javavs='/usr/libexec/java_home -V'
