@@ -51,6 +51,7 @@ alias nsw='build=static npm run watch'
 alias na='npn run dev-all'
 alias ntw='npm run test:watch'
 alias ntc='npm run test:coverage'
+source ~/.sendlane-profile
 
 #php aliases
 alias art='sl && php artisan'
@@ -65,7 +66,6 @@ alias mtenant='art migrate:tenants --tenantdb _user'
 alias mtrollback='art migrate:tenants_rollback'
 alias formq='php artisan queue:listen --queue=forms'
 alias massD='php artisan massDelete:subscribers'
-source ~/.sendlane-profile
 
 #composer aliases
 alias ca='composer dump-autoload'
