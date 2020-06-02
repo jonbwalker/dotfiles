@@ -24,7 +24,7 @@ alias javav='java -version'
 
 # shortcuts
 alias dfiles='cd ~/Workspace/dotfiles'
-alias vzsh='vim ~/.zshrc'
+alias vzsh='vim ~/.aliases.zsh'
 alias jbw='~//Workspace/jonbwalker.com'
 
 #npm global aliaes
@@ -51,6 +51,7 @@ alias nsw='build=static npm run watch'
 alias na='npn run dev-all'
 alias ntw='npm run test:watch'
 alias ntc='npm run test:coverage'
+alias pa='analyze=true build=interface npm run prod'
 source ~/.sendlane-profile
 
 #php aliases
@@ -63,6 +64,7 @@ alias bc='ca && cc && acc'
 #php artisan commands
 alias mmain='art migrate --path=database/migrations/main'
 alias mtenant='art migrate:tenants --tenantdb _user'
+alias mtest="DB_DATABASE=test mmain"
 alias mtrollback='art migrate:tenants_rollback'
 alias formq='php artisan queue:listen --queue=forms'
 alias massD='php artisan massDelete:subscribers'
