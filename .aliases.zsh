@@ -10,6 +10,7 @@ alias debug='/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --re
 alias gc='git checkout $1'
 alias gcm='gc master'
 alias gpr='git pull --rebase'
+alias gref='git stash && gpr && git stash pop'
 alias st='git status -s'
 alias gad='git add -A'
 alias grs='git reset --soft HEAD^'
