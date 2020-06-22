@@ -53,6 +53,7 @@ alias na='npn run dev-all'
 alias ntw='npm run test:watch'
 alias ntc='npm run test:coverage'
 alias pa='analyze=true build=interface npm run prod'
+alias eds='envoy run deploy-staging --branch=feature/new-dashboard'
 source ~/.sendlane-profile
 
 #php aliases
