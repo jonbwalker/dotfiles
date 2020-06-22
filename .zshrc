@@ -11,7 +11,8 @@ PATH=$PATH:~/.composer/vendor/bin
 PATH=$PATH:~/Code/sendlane/sendlane/vendor/phpunit/phpunit
 PATH=$PATH:~/.config
 PATH=$PATH:$ANDROID_HOME
-
+PATH=$PATH:/usr/local/opt/icu4c/bin
+PATH=$PATH:/usr/local/opt/icu4c/sbin
 # Lines configured by zsh-newuser-install
 HISTFILE=~/.histfile
 HISTSIZE=1000
