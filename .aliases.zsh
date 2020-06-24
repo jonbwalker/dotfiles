@@ -54,6 +54,7 @@ alias ntw='npm run test:watch'
 alias ntc='npm run test:coverage'
 alias pa='analyze=true build=interface npm run prod'
 alias eds='envoy run deploy-staging --branch=feature/new-dashboard'
+alias dcc='art helpers:clear-dashboard-cache --domain=user'
 source ~/.sendlane-profile
 
 #php aliases
