@@ -8,7 +8,7 @@ alias debug='/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --re
 
 #git aliases
 alias gc='git checkout $1'
-alias gcm='gc master'
+alias gcm='gc main'
 alias gpr='git pull --rebase'
 alias gref='git stash && gpr && git stash pop'
 alias st='git status -s'
@@ -16,7 +16,7 @@ alias gad='git add -A'
 alias grs='git reset --soft HEAD^'
 alias fbranch='gup && gcb'
 alias branch='sl && gcf && fbranch'
-alias gpm='git pull origin master'
+alias gpm='git pull origin main'
 alias gstat='git status -s'
 
 #java aliases
