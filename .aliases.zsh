@@ -18,6 +18,7 @@ alias fbranch='gup && gcb'
 alias branch='sl && gcf && fbranch'
 alias gpm='git pull origin main'
 alias gstat='git status -s'
+alias glast='git log -n1 -p'
 
 #java aliases
 alias javavs='/usr/libexec/java_home -V'
@@ -31,6 +32,7 @@ alias jbw='~//Workspace/jonbwalker.com'
 #npm global aliaes
 alias ni='npm i'
 alias nrm='rm -rf node_modules && ni'
+alias nid='npm -g ls --depth=0'
 
 #npx aliases
 alias ntm='npx majestic --app'
