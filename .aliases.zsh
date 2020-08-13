@@ -59,7 +59,7 @@ source ~/.sendlane-profile
 
 #php aliases
 alias art='sl && php artisan'
-alias rseed='cda && art db:seed --class='
+alias rseed='art db:seed --class='
 alias ac='art config:cache'
 alias acc='art config:clear'
 alias bc='ca && cc && acc'
@@ -69,8 +69,10 @@ alias mmain='art migrate --path=database/migrations/main'
 alias mtenant='art migrate:tenants --tenantdb _user'
 alias mtest="DB_DATABASE=test mmain"
 alias mtrollback='art migrate:tenants_rollback'
-alias formq='php artisan queue:listen --queue=forms'
-alias massD='php artisan massDelete:subscribers'
+alias formq='art queue:listen --queue=forms'
+alias massD='art massDelete:subscribers'
+alias send='art schedule:run'
+alias sendw='art horizon'
 
 #composer aliases
 alias ca='composer dump-autoload'
