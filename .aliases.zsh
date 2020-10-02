@@ -55,7 +55,7 @@ alias na='npn run dev-all'
 alias ntw='npm run test:watch'
 alias ntc='npm run test:coverage'
 alias pa='analyze=true build=interface npm run prod'
-alias eds='envoy run deploy-staging --branch=feature/new-dashboard'
+alias eds='envoy run deploy-test2 --branch=feature/clickbank-standardization'
 alias dcc='art helpers:clear-dashboard-cache --domain=user'
 source ~/.sendlane-profile
 
