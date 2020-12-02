@@ -43,8 +43,8 @@ alias javav='java -version'
 
 #sendlane aliases
 alias hs='cd ~/Homestead'
-alias sl='cd ~/code/sendlane/sendlane'
-alias sli='cd ~/code/sendlane/sendlane/resources/assets/mix/interface/views'
+alias sl='cd ~/Sites/sendlane'
+alias sli='cd ~/Sites/sendlane/resources/assets/mix/interface/views'
 alias nh='npm run hot'
 alias nd='npm run dev'
 alias nho='npm run hot:ops'
