@@ -41,6 +41,7 @@ CASKS=(
     flycut
     firefox
     iterm2
+    macvim
     slack
     spotify
     sublime-text
