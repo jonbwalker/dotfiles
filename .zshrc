@@ -2,14 +2,10 @@ source ~/.zsh-config.zsh
 source ~/.functions.zsh
 source ~/.aliases.zsh
 
-NVM_DIR="$HOME/.nvm"
-. "/usr/local/opt/nvm/nvm.sh"
-
+PATH=/usr/local/sbin:$PATH
 PATH=$PATH:~/.composer/vendor/bin
-PATH=$PATH:~/Code/sendlane/sendlane/vendor/phpunit/phpunit
 PATH=$PATH:~/.config
-# PATH=$PATH:/usr/local/opt/icu4c/bin
-#  PATH=$PATH:/usr/local/opt/icu4c/sbin
+
 # Lines configured by zsh-newuser-install
 HISTFILE=~/.histfile
 HISTSIZE=1000
@@ -29,3 +25,7 @@ if [ -f /Users/jonbwalker/.tnsrc ]; then
     source /Users/jonbwalker/.tnsrc
 fi
 ###-tns-completion-end-###
+
+export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
