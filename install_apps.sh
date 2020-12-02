@@ -67,6 +67,9 @@ defaults write com.apple.screensaver askForPasswordDelay -int 0
 # Show filename extensions by default
 defaults write NSGlobalDomain AppleShowAllExtensions -bool true
 
+# Use mouse scroll wheel in Vim
+defaults write com.googlecode.iterm2 AlternateMouseScroll -bool true
+
 # Show hidden files by default
 defaults write com.apple.finder AppleShowAllFiles YES
 
