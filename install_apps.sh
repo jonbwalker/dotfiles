@@ -25,9 +25,6 @@ brew install bash
 
 PACKAGES=(
     npm
-    terminal-notifier
-    vim
-    zsh
     zsh-completions
 )
 
@@ -43,8 +40,6 @@ CASKS=(
     google-chrome-canary
     firefox
     iterm2
-    macvim
-    skype
     slack
     spotify
     sublime-text
@@ -52,7 +47,6 @@ CASKS=(
     visual-studio-code
     webstorm
     paintbrush
-    bettertouchtool
 )
 
 echo "Installing cask apps..."
@@ -82,18 +76,12 @@ defaults -currentHost write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
 
 # Disable OS X Gate Keeper
 # Install apps from any developer, not just  App Store apps
-sudo spctl --master-disable
-sudo defaults write /var/db/SystemPolicy-prefs.plist enabled -string no
-defaults write com.apple.LaunchServices LSQuarantine -bool false
-
-# Automatically quit printer app once the print jobs complete
-defaults write com.apple.print.PrintingPrefs "Quit When Finished" -bool true
+# sudo spctl --master-disable
+# sudo defaults write /var/db/SystemPolicy-prefs.plist enabled -string no
+# defaults write com.apple.LaunchServices LSQuarantine -bool false
 
 # Use list view in all Finder windows by default
 defaults write com.apple.finder FXPreferredViewStyle Nlsv
-
-# Enable full keyboard access for all controls (e.g. enable Tab in modal dialogs)"
-# defaults write NSGlobalDomain AppleKeyboardUIMode -int 3
 
 # Enable f keys
 defaults write -g com.apple.keyboard.fnState -boolean true
@@ -133,11 +121,6 @@ defaults write com.apple.screencapture location ~/Screenshots
 
 echo "Running symlinks.sh"
 sh ~/Workspace/dotfiles/symlinks.sh
-
-if test ! $(which zsh); then
-    echo "Installing oh my zsh..."
-    sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
-fi
 
 echo "Restarting Finder and SystemUI for changes to take effect"
 killall Finder
