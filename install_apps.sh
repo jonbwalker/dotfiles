@@ -122,6 +122,11 @@ defaults write com.apple.screencapture location ~/Screenshots
 echo "Running symlinks.sh"
 sh ~/Workspace/dotfiles/symlinks.sh
 
+if test ! $(which zsh); then
+    echo "Installing oh my zsh..."
+    sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+fi
+
 echo "Restarting Finder and SystemUI for changes to take effect"
 killall Finder
 killall SystemUIServer
