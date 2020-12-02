@@ -38,6 +38,7 @@ brew tap homebrew/cask-versions
 CASKS=(
     google-chrome
     google-chrome-canary
+    flycut
     firefox
     iterm2
     slack
@@ -47,6 +48,7 @@ CASKS=(
     visual-studio-code
     webstorm
     paintbrush
+    sequel-pro
 )
 
 echo "Installing cask apps..."
