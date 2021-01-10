@@ -57,6 +57,7 @@ alias ntc='npm run test:coverage'
 alias pa='analyze=true build=interface npm run prod'
 alias eds='envoy run deploy-test2 --branch=feature/clickbank-standardization'
 alias dcc='art helpers:clear-dashboard-cache --domain=user'
+alias hc='art helpers:clear-cache'
 source ~/.sendlane-profile
 
 #php aliases
