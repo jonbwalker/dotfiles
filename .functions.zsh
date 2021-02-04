@@ -16,3 +16,5 @@ gbug() {
         git checkout bugfix/"$@"
         git stash pop
 }
+dt2() { envoy run deploy-test2 --branch="$@" }
+dqa() { envoy run deploy-qa --branch="$@" }
