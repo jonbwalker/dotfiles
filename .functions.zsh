@@ -1,20 +1,20 @@
 #git functions
-feat() { git checkout feature/"$@" ; }
-bug() { git checkout bugfix/"$@" ; }
-release() { git checkout release/"$@" ; }
+feat() { git checkout feature/"$*" ; }
+bug() { git checkout bugfix/"$*" ; }
+release() { git checkout release/"$*" ; }
 gfeat() {
         git stash
         sleep 3
         git pull origin --rebase
-        git checkout feature/"$@"
+        git checkout feature/"$*"
         git stash pop
 }
 gbug() {
         git stash
         sleep 3
         git pull origin --rebase
-        git checkout bugfix/$@
+        git checkout bugfix/$*
         git stash pop
 }
-dt2() { envoy run deploy-test2 --branch="$@" ; }
-dqa() { envoy run deploy-qa --branch="$@" ; }
+dt2() { envoy run deploy-test2 --branch="$*" ; }
+dqa() { envoy run deploy-qa --branch="$*" ; }
