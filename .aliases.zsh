@@ -56,10 +56,16 @@ alias na='npn run dev-all'
 alias ntw='npm run test:watch'
 alias ntc='npm run test:coverage'
 alias pa='analyze=true build=interface npm run prod'
-alias eds='envoy run deploy-test2 --branch=feature/clickbank-standardization'
 alias dcc='art helpers:clear-dashboard-cache --domain=user'
 alias hc='art helpers:clear-cache'
 source ~/.sendlane-profile
+
+#sendlane deploys
+alias t1b='envoy run deploy-test1 --currentbranch'
+alias t2b='envoy run deploy-test2 --currentbranch'
+alias t3b='envoy run deploy-test3 --currentbranch'
+alias t4b='envoy run deploy-test4 --currentbranch'
+alias edp='envoy run deploy-web'
 
 #php aliases
 alias art='sl && php artisan'
