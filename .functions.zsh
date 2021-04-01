@@ -17,4 +17,6 @@ gbug() {
         git stash pop
 }
 dt2() { envoy run deploy-test2 --branch="$*" ; }
+dt3() { envoy run deploy-test3 --branch="$*" ; }
+dt4() { envoy run deploy-test4 --branch="$*" ; }
 dqa() { envoy run deploy-qa --branch="$*" ; }
