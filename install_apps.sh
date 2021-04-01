@@ -135,6 +135,7 @@ fi
 
 echo "Restarting Finder and SystemUI for changes to take effect"
 killall Finder
+killall Dock
 killall SystemUIServer
 
 echo "Custom install complete, your Macbook is ready to use ;)"
