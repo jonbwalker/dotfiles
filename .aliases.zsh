@@ -33,16 +33,12 @@ alias jbw='~//Workspace/jonbwalker.com'
 alias ni='npm i'
 alias nrm='rm -rf node_modules && ni'
 alias nid='npm -g ls --depth=0'
+alias ncc='npm cache clean --force'
 
 #npx aliases
 alias ntm='npx majestic --app'
 
-#java aliases
-alias javavs='/usr/libexec/java_home -V'
-alias javav='java -version'
-
 #sendlane aliases
-alias hs='cd ~/Homestead'
 alias sl='cd ~/Sites/sendlane'
 alias sli='cd ~/Sites/sendlane/resources/assets/mix/interface/views'
 alias nh='npm run hot'
@@ -77,25 +73,23 @@ alias bc='ca && cc && acc'
 #php artisan commands
 alias mmain='art migrate --path=database/migrations/main'
 alias mtenant='art migrate:tenants --tenantdb _user'
+alias mdeliver="php artisan migrate --path=database/migrations/deliverability --database deliverability"
 alias mtest="DB_DATABASE=test mmain"
 alias mtrollback='art migrate:tenants_rollback'
 alias formq='art queue:listen --queue=forms'
 alias massD='art massDelete:subscribers'
 alias send='art schedule:run'
-alias sendw='art horizon'
+alias qw='php artisan queue:work'
+alias qra="art queue:retry all"
+alias rh='art horizon'
+alias disb='art campaign:dispatch-batches'
 
 #composer aliases
 alias ca='composer dump-autoload'
-alias ci='composer install'
-alias cu='composer update'
+alias ci='composer install --ignore-platform-reqs'
+alias cu='composer update --ignore-platform-reqs'
 alias cc='composer clear-cache'
 
-#docker aliases
-alias dc='docker-compose'
-alias dps='docker ps'
-alias dup='dc up'
-alias ddown='dc down'
-alias dpull='dc pull'
-alias dall=" dc down --rmi ‘all’"
-alias dlogs='docker logs $1'
-alias dexec='docker exec -it $1 /bin/bash'
+#brew aliases
+alias brm='brew services restart mysql@5.7'
+
