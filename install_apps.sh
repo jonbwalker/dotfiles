@@ -18,10 +18,10 @@
 #brew install gnu-grep --with-default-names
 
 # Install GNU `find`, `locate`, `updatedb`, and `xargs`, g-prefixed
-brew install findutils
+#brew install findutils
 
 # Install Bash 4
-brew install bash
+#brew install bash
 
 PACKAGES=(
     npm
@@ -41,7 +41,6 @@ CASKS=(
     flycut
     firefox
     iterm2
-    macvim
     slack
     spotify
     sublime-text
@@ -75,10 +74,6 @@ defaults write com.googlecode.iterm2 AlternateMouseScroll -bool true
 
 # Show hidden files by default
 defaults write com.apple.finder AppleShowAllFiles YES
-
-# Enable tap-to-click
-defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad Clicking -bool true
-defaults -currentHost write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
 
 # Disable OS X Gate Keeper
 # Install apps from any developer, not just  App Store apps
