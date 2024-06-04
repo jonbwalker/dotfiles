@@ -33,11 +33,10 @@ brew install ${PACKAGES[@]}
 
 echo "Cleaning up..."
 brew cleanup
-brew tap homebrew/cask-versions
 
 CASKS=(
     google-chrome
-    google-chrome-canary
+    google-chrome@canary
     flycut
     firefox
     iterm2
@@ -48,11 +47,11 @@ CASKS=(
     visual-studio-code
     webstorm
     paintbrush
-    sequel-pro
+    sequel-ace
 )
 
 echo "Installing cask apps..."
-brew cask install --appdir="/Applications" ${CASKS[@]}
+brew install --cask --appdir="/Applications" ${CASKS[@]}
 
 echo "Installing global npm packages..."
 npm install marked -g
