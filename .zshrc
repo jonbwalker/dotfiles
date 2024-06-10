@@ -7,6 +7,7 @@ source ~/.aliases.zsh
 PATH=/usr/local/sbin:$PATH
 PATH=$PATH:~/.composer/vendor/bin
 PATH=$PATH:~/.config
+PATH=$PATH:/opt/homebrew/Cellar/mysql@8.0/8.0.37/bin
 
 # Lines configured by zsh-newuser-install
 HISTFILE=~/.histfile
