@@ -48,6 +48,7 @@ CASKS=(
     webstorm
     paintbrush
     sequel-ace
+    zoom
 )
 
 echo "Installing cask apps..."
