@@ -17,4 +17,5 @@ ln -s $dotfilepath/.zsh-config.zsh $HOME/.zsh-config.zsh
 ln -s $dotfilepath/.functions.zsh $HOME/.functions.zsh
 ln -s $dotfilepath/.gitconfig $HOME/.gitconfig
 ln -s $dotfilepath/.zshrc $HOME/.zshrc
+ln -s $dotfilepath/.vimrc $HOME/.vimrc
 ln -s $dotfilepath/.aliases.zsh $HOME/.aliases.zsh
