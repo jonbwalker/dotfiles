@@ -1,6 +1,6 @@
 # This is Git's per-user configuration file.
 [user]
-	name = jon walker
+	name = jonbwalker
 	email = jwalker@sendlane.com
 [filter "lfs"]
 	clean = git-lfs clean -- %f
