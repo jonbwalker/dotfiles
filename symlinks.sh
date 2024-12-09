@@ -19,3 +19,4 @@ ln -s $dotfilepath/.gitconfig $HOME/.gitconfig
 ln -s $dotfilepath/.zshrc $HOME/.zshrc
 ln -s $dotfilepath/.vimrc $HOME/.vimrc
 ln -s $dotfilepath/.aliases.zsh $HOME/.aliases.zsh
+ln -s $dotfilepath/.nvmrc.zsh $HOME/.nvmrc.zsh

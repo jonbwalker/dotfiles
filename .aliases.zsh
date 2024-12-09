@@ -38,31 +38,6 @@ alias ncc='npm cache clean --force'
 #npx aliases
 alias ntm='npx majestic --app'
 
-#sendlane aliases
-alias sl='cd ~/Sites/sendlane'
-alias sli='cd ~/Sites/sendlane/resources/assets/mix/interface/views'
-alias nh='npm run hot'
-alias nd='npm run dev'
-alias nho='npm run hot:ops'
-alias nw='build=interface npm run watch'
-alias nsd='build=scripts npm run dev'
-alias nsw='build=static npm run watch'
-alias neew='build=emailEditor npm run watch'
-alias na='npn run dev-all'
-alias ntw='npm run test:watch'
-alias ntc='npm run test:coverage'
-alias pa='analyze=true build=interface npm run prod'
-alias dcc='art helpers:clear-dashboard-cache --domain=user'
-alias hc='art helpers:clear-cache'
-source ~/.sendlane-profile
-
-#sendlane deploys
-alias t1b='envoy run deploy-test1 --currentbranch'
-alias t2b='envoy run deploy-test2 --currentbranch'
-alias t3b='envoy run deploy-test3 --currentbranch'
-alias t4b='envoy run deploy-test4 --currentbranch'
-alias edp='envoy run deploy-web'
-
 #php aliases
 alias art='sl && php artisan'
 alias rseed='art db:seed --class='
@@ -78,7 +53,6 @@ alias mtest="DB_DATABASE=test mmain"
 alias mtrollback='art migrate:tenants_rollback'
 alias formq='art queue:listen --queue=forms'
 alias massD='art massDelete:subscribers'
-alias send='art schedule:run'
 alias qw='php artisan queue:work'
 alias qra="art queue:retry all"
 alias rh='art horizon'
