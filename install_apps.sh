@@ -126,7 +126,7 @@ sh ~/Workspace/dotfiles/symlinks.sh
 
 if test ! $(which zsh); then
     echo "Installing oh my zsh..."
-    sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+    sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 fi
 
 echo "Restarting Finder and SystemUI for changes to take effect"
