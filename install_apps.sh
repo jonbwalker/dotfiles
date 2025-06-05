@@ -42,7 +42,6 @@ CASKS=(
     iterm2
     slack
     spotify
-    sublime-text
     visual-studio-code
     webstorm
     paintbrush
