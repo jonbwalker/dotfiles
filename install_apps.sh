@@ -43,7 +43,6 @@ CASKS=(
     slack
     spotify
     sublime-text
-    spectacle
     visual-studio-code
     webstorm
     paintbrush
