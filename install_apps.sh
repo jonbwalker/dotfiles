@@ -55,6 +55,9 @@ brew install --cask --appdir="/Applications" ${CASKS[@]}
 echo "Installing global npm packages..."
 npm install marked -g
 
+echo "Installing NVM"
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.3/install.sh | bash
+
 echo "Configuring OSX..."
 
 # example of how to read a value
