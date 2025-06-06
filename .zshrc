@@ -3,7 +3,6 @@
 source ~/.zsh-config.zsh
 source ~/.functions.zsh
 source ~/.aliases.zsh
-source ~/.sendlane-profile
 
 export PATH=/usr/local/sbin:$PATH
 export PATH=$PATH:~/.config
