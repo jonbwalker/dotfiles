@@ -5,10 +5,8 @@ source ~/.functions.zsh
 source ~/.aliases.zsh
 source ~/.sendlane-profile
 
-PATH=/usr/local/sbin:$PATH
-PATH=$PATH:~/.composer/vendor/bin
-PATH=$PATH:~/.config
-PATH=$PATH:/opt/homebrew/Cellar/mysql@8.0/8.0.37/bin
+export PATH=/usr/local/sbin:$PATH
+export PATH=$PATH:~/.config
 
 # Lines configured by zsh-newuser-install
 HISTFILE=~/.histfile
