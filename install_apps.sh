@@ -74,7 +74,7 @@ defaults write NSGlobalDomain AppleShowAllExtensions -bool true
 defaults write com.googlecode.iterm2 AlternateMouseScroll -bool true
 
 # Show hidden files by default
-defaults write com.apple.finder AppleShowAllFiles YES
+defaults write com.apple.finder AppleShowAllFiles -bool true
 
 # Disable OS X Gate Keeper
 # Install apps from any developer, not just  App Store apps
@@ -99,10 +99,10 @@ defaults write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
 
 # Don't create .DS_Store files on network volumes"
 defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
-# Set Dock to auto-hide and remove the auto-hide delay
+# Set Dock to auto-hide and minimize the auto-hide delay (adjusted for macOS 15.5 compatibility)
 defaults write com.apple.dock autohide -bool true
-defaults write com.apple.dock autohide-delay -float 0
-defaults write com.apple.dock autohide-time-modifier -float 0
+defaults write com.apple.dock autohide-delay -float 0.1
+defaults write com.apple.dock autohide-time-modifier -float 0.2
 
 # Set screenshot format to PNG
 defaults write com.apple.screencapture type -string "png"
@@ -110,9 +110,9 @@ defaults write com.apple.screencapture type -string "png"
 # Enable Finder quit option
 defaults write com.apple.finder QuitMenuItem -bool true;
 
-# Set Key Repeat to fastest setting
-defaults write -g InitialKeyRepeat -int 14 # normal minimum is 15 (225 ms)
-defaults write -g KeyRepeat -int 1 # normal minimum is 2 (30 ms)
+# Set Key Repeat to fastest setting (adjusted for macOS 15.5 compatibility)
+defaults write -g InitialKeyRepeat -int 15 # minimum value for macOS 15.5
+defaults write -g KeyRepeat -int 2 # minimum value for macOS 15.5
 
 echo "Creating folder structure..."
 [[ ! -d ~/Workspace ]] && mkdir Workspace
