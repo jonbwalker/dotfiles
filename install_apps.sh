@@ -1,38 +1,16 @@
 #!/usr/bin/env bash
 # Bootstrap script for installing apps on a fresh macOS machine
-
 # Source Links
 # https://dotfiles.github.io/
 # https://gist.github.com/codeinthehole/26b37efa67041e1307db
 # https://gist.github.com/bradp/bea76b16d3325f5c47d4
 # https://www.defaults-write.com/change-default-view-style-in-os-x-finder/
 
-
-# Install GNU core utilities (those that come with OS X are outdated)
-#brew tap homebrew/dupes
-#brew install coreutils
-#brew install gnu-sed --with-default-names
-#brew install gnu-tar --with-default-names
-#brew install gnu-indent --with-default-names
-#brew install gnu-which --with-default-names
-#brew install gnu-grep --with-default-names
-
-# Install GNU `find`, `locate`, `updatedb`, and `xargs`, g-prefixed
-#brew install findutils
-
-# Install Bash 4
-#brew install bash
-
+# Global definitions for packages and casks
 PACKAGES=(
     npm
     zsh-completions
 )
-
-echo "Installing packages..."
-brew install ${PACKAGES[@]}
-
-echo "Cleaning up..."
-brew cleanup
 
 CASKS=(
     google-chrome
@@ -49,89 +27,163 @@ CASKS=(
     zoom
 )
 
-echo "Installing cask apps..."
-brew install --cask --appdir="/Applications" ${CASKS[@]}
+# --- Function Definitions ---
 
-echo "Installing global npm packages..."
-npm install marked -g
+# Install GNU core utilities (commented out, preserved from original)
+# install_gnu_utilities() {
+#   echo "Installing GNU utilities..."
+#   brew tap homebrew/dupes
+#   brew install coreutils
+#   brew install gnu-sed --with-default-names
+#   brew install gnu-tar --with-default-names
+#   brew install gnu-indent --with-default-names
+#   brew install gnu-which --with-default-names
+#   brew install gnu-grep --with-default-names
+#   # Install GNU `find`, `locate`, `updatedb`, and `xargs`, g-prefixed
+#   brew install findutils
+#   # Install Bash 4
+#   brew install bash
+# }
 
-echo "Installing NVM"
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.3/install.sh | bash
+install_brew_packages() {
+    echo "Installing Homebrew packages..."
+    brew install "${PACKAGES[@]}"
+    echo "Cleaning up Homebrew..."
+    brew cleanup
+}
 
-echo "Configuring OSX..."
+install_cask_apps() {
+    echo "Installing Cask applications..."
+    brew install --cask --appdir="/Applications" "${CASKS[@]}"
+}
 
-# example of how to read a value
-## defaults read com.apple.screensaver askForPassword
+install_global_npm_packages() {
+    echo "Installing global npm packages..."
+    npm install marked -g
+}
 
-# Require password as soon as screensaver or sleep mode starts
-defaults write com.apple.screensaver askForPassword -int 1
-defaults write com.apple.screensaver askForPasswordDelay -int 0
+install_nvm() {
+    echo "Installing NVM (Node Version Manager)..."
+    # Installs NVM v0.40.3 specifically
+    curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.3/install.sh | bash
+}
 
-# Show filename extensions by default
-defaults write NSGlobalDomain AppleShowAllExtensions -bool true
+configure_macos_settings() {
+    echo "Configuring macOS settings..."
 
-# Use mouse scroll wheel in Vim
-defaults write com.googlecode.iterm2 AlternateMouseScroll -bool true
+    # Require password as soon as screensaver or sleep mode starts
+    defaults write com.apple.screensaver askForPassword -int 1
+    defaults write com.apple.screensaver askForPasswordDelay -int 0
 
-# Show hidden files by default
-defaults write com.apple.finder AppleShowAllFiles -bool true
+    # Show filename extensions by default
+    defaults write NSGlobalDomain AppleShowAllExtensions -bool true
 
-# Disable OS X Gate Keeper
-# Install apps from any developer, not just  App Store apps
-# sudo spctl --master-disable
-# sudo defaults write /var/db/SystemPolicy-prefs.plist enabled -string no
-# defaults write com.apple.LaunchServices LSQuarantine -bool false
+    # Use mouse scroll wheel in Vim (for iTerm2)
+    defaults write com.googlecode.iterm2 AlternateMouseScroll -bool true
 
-# Use list view in all Finder windows by default
-defaults write com.apple.finder FXPreferredViewStyle Nlsv
+    # Show hidden files by default
+    defaults write com.apple.finder AppleShowAllFiles -bool true
 
-# Enable f keys
-defaults write -g com.apple.keyboard.fnState -boolean true
+    # Disable OS X Gate Keeper (Uncomment if needed, use with caution)
+    # echo "Disabling Gate Keeper (requires sudo privileges)..."
+    # sudo spctl --master-disable
+    # sudo defaults write /var/db/SystemPolicy-prefs.plist enabled -string no
+    # defaults write com.apple.LaunchServices LSQuarantine -bool false
 
-# Set trackpad & mouse speed"
-defaults write -g com.apple.trackpad.scaling 2
-defaults write -g com.apple.mouse.scaling 2.5
+    # Use list view in all Finder windows by default
+    defaults write com.apple.finder FXPreferredViewStyle Nlsv
 
-# Enable tap to click (Trackpad) for this user and for the login screen
-defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad Clicking -bool true
-defaults -currentHost write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
-defaults write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
+    # Enable F keys (use F1, F2, etc. keys as standard function keys)
+    defaults write -g com.apple.keyboard.fnState -boolean true
 
-# Don't create .DS_Store files on network volumes"
-defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
-# Set Dock to auto-hide and minimize the auto-hide delay (adjusted for macOS 15.5 compatibility)
-defaults write com.apple.dock autohide -bool true
-defaults write com.apple.dock autohide-delay -float 0.1
-defaults write com.apple.dock autohide-time-modifier -float 0.2
+    # Set trackpad & mouse speed
+    defaults write -g com.apple.trackpad.scaling 2
+    defaults write -g com.apple.mouse.scaling 2.5
 
-# Set screenshot format to PNG
-defaults write com.apple.screencapture type -string "png"
+    # Enable tap to click (Trackpad) for this user and for the login screen
+    defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad Clicking -bool true
+    defaults -currentHost write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
+    defaults write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
 
-# Enable Finder quit option
-defaults write com.apple.finder QuitMenuItem -bool true;
+    # Don't create .DS_Store files on network volumes
+    defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
 
-# Set Key Repeat to fastest setting (adjusted for macOS 15.5 compatibility)
-defaults write -g InitialKeyRepeat -int 15 # minimum value for macOS 15.5
-defaults write -g KeyRepeat -int 2 # minimum value for macOS 15.5
+    # Set Dock to auto-hide and minimize the auto-hide delay
+    defaults write com.apple.dock autohide -bool true
+    defaults write com.apple.dock autohide-delay -float 0.1       # Delay before Dock hides
+    defaults write com.apple.dock autohide-time-modifier -float 0.2 # Speed of hide/show animation
 
-echo "Creating folder structure..."
-[[ ! -d ~/Workspace ]] && mkdir Workspace
-[[ ! -d ~/ScreenShots ]] && mkdir ScreenShots
+    # Set screenshot format to PNG
+    defaults write com.apple.screencapture type -string "png"
 
-# Set screenshots location
-defaults write com.apple.screencapture location ~/Screenshots
+    # Enable Finder quit option
+    defaults write com.apple.finder QuitMenuItem -bool true
 
-echo "Running symlinks.sh"
-sh ~/Workspace/dotfiles/symlinks.sh
+    # Set Key Repeat to fastest setting
+    defaults write -g InitialKeyRepeat -int 15 # Time until key repeat starts (lower is faster)
+    defaults write -g KeyRepeat -int 2         # Key repeat rate (lower is faster)
+}
 
-if test ! $(which zsh); then
-    echo "Installing oh my zsh..."
-    sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-fi
+create_user_directories() {
+    echo "Creating user directories..."
+    [[ ! -d "$HOME/Workspace" ]] && mkdir "$HOME/Workspace"
+    [[ ! -d "$HOME/Screenshots" ]] && mkdir "$HOME/Screenshots"
 
-echo "Restarting Finder and SystemUI for changes to take effect"
-killall Finder
-killall Dock
-killall SystemUIServer
+    # Set screenshots location
+    defaults write com.apple.screencapture location "$HOME/Screenshots"
+    echo "Screenshots will be saved to $HOME/Screenshots"
+}
 
-echo "Custom install complete, your Macbook is ready to use ;)"
+setup_symlinks() {
+    local symlinks_script_path="$HOME/Workspace/dotfiles/symlinks.sh"
+    if [ -f "$symlinks_script_path" ]; then
+        echo "Running symlinks.sh..."
+        sh "$symlinks_script_path"
+    else
+        echo "Warning: Symlinks script not found at $symlinks_script_path"
+    fi
+}
+
+install_oh_my_zsh() {
+    if [ ! -d "$HOME/.oh-my-zsh" ]; then
+        echo "Installing Oh My Zsh..."
+        # The installer might try to change the shell, ensure Zsh is installed first
+        if ! command -v zsh &> /dev/null; then
+            echo "Zsh not found. Please install Zsh first."
+            # Example: brew install zsh (if Homebrew is managing zsh)
+            # Or ensure /bin/zsh or /usr/local/bin/zsh exists
+            # For this script, we assume zsh is available if installing Oh My Zsh
+        fi
+        sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
+    else
+        echo "Oh My Zsh is already installed."
+    fi
+}
+
+restart_ui_services() {
+    echo "Restarting Finder, Dock, and SystemUIServer for changes to take effect..."
+    killall Finder
+    killall Dock
+    killall SystemUIServer
+}
+
+# --- Main Script Execution ---
+main() {
+    echo "Starting macOS bootstrap process..."
+
+    # install_gnu_utilities # Uncomment if needed
+    install_brew_packages
+    install_cask_apps
+    install_global_npm_packages
+    install_nvm
+    configure_macos_settings
+    create_user_directories
+    setup_symlinks
+    install_oh_my_zsh
+    restart_ui_services
+
+    echo "Custom macOS setup complete. Your MacBook is ready to use! ;)"
+    echo "Note: Some changes might require a full restart to take effect."
+}
+
+main
