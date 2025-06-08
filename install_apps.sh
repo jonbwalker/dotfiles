@@ -57,11 +57,6 @@ install_cask_apps() {
     brew install --cask --appdir="/Applications" "${CASKS[@]}"
 }
 
-install_global_npm_packages() {
-    echo "Installing global npm packages..."
-    npm install marked -g
-}
-
 install_nvm() {
     echo "Installing NVM (Node Version Manager)..."
     # Installs NVM v0.40.3 specifically
@@ -150,9 +145,6 @@ install_oh_my_zsh() {
         # The installer might try to change the shell, ensure Zsh is installed first
         if ! command -v zsh &> /dev/null; then
             echo "Zsh not found. Please install Zsh first."
-            # Example: brew install zsh (if Homebrew is managing zsh)
-            # Or ensure /bin/zsh or /usr/local/bin/zsh exists
-            # For this script, we assume zsh is available if installing Oh My Zsh
         fi
         sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
     else
@@ -174,7 +166,6 @@ main() {
     # install_gnu_utilities # Uncomment if needed
     install_brew_packages
     install_cask_apps
-    install_global_npm_packages
     install_nvm
     configure_macos_settings
     create_user_directories
