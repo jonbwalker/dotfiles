@@ -117,6 +117,9 @@ configure_macos_settings() {
     # Set Key Repeat to fastest setting
     defaults write -g InitialKeyRepeat -int 15 # Time until key repeat starts (lower is faster)
     defaults write -g KeyRepeat -int 2         # Key repeat rate (lower is faster)
+
+    # Set rearrange spaces (Desktops) based on recent use to false
+    defaults write com.apple.dock mru-spaces -bool false
 }
 
 create_user_directories() {
